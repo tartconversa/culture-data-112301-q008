@@ -1,8 +1,8 @@
-{"id":"W0","skills":["concept","derivative"],"available_hours":24.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W1","skills":["derivative"],"available_hours":25.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W2","skills":["concept","derivative"],"available_hours":26.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W3","skills":["derivative"],"available_hours":27.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W4","skills":["concept","derivative"],"available_hours":28.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W5","skills":["derivative"],"available_hours":29.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W6","skills":["concept","derivative"],"available_hours":30.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
-{"id":"W7","skills":["derivative"],"available_hours":31.0,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W0","skills":["concept","derivative"],"available_hours":24.0,"cost_per_hour_minor":3000,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W1","skills":["derivative"],"available_hours":25.0,"cost_per_hour_minor":3200,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W2","skills":["concept","derivative"],"available_hours":26.0,"cost_per_hour_minor":3400,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W3","skills":["derivative"],"available_hours":27.0,"cost_per_hour_minor":3600,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W4","skills":["concept","derivative"],"available_hours":28.0,"cost_per_hour_minor":3800,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W5","skills":["derivative"],"available_hours":29.0,"cost_per_hour_minor":4000,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W6","skills":["concept","derivative"],"available_hours":30.0,"cost_per_hour_minor":4200,"week":"2026-10-05","territories":["EU","NA","JP"]}
+{"id":"W7","skills":["derivative"],"available_hours":31.0,"cost_per_hour_minor":4400,"week":"2026-10-05","territories":["EU","NA","JP"]}

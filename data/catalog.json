@@ -259,6 +259,11 @@
           "nullable": false,
           "description": "可用周工时"
         },
+        "cost_per_hour_minor": {
+          "type": "int",
+          "nullable": false,
+          "description": "2026年批准工时成本率，美分每小时"
+        },
         "week": {
           "type": "str",
           "nullable": false,
@@ -272,7 +277,7 @@
       },
       "key": "id",
       "references": {},
-      "sha256": "156235099b320cac303c2723911b149ce5096eeb22d803f5e2fd7c18cd826928",
+      "sha256": "b22bcaaa40e380f0beb9c7246e60a3e29db4daac14e012074f526ced8b59f3c5",
       "row_count": 8
     },
     "outsourcing": {
