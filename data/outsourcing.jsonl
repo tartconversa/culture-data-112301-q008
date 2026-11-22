@@ -1,0 +1,2 @@
+{"id":"OS1","kind":"whole-pack","hours":40.0,"price_minor":160000,"week":"2026-10-05","min_purchase_hours":40.0,"release_by_stage":false}
+{"id":"OS2","kind":"staged","hours":32.0,"price_minor":144000,"week":"2026-10-05","min_purchase_hours":8.0,"release_by_stage":true}

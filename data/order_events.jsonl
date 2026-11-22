@@ -1,0 +1,4 @@
+{"id":"E1","quote":"Q1","kind":"customer_accept","on":"2026-10-02","payload":{"fixed_price_minor":350000}}
+{"id":"E2","quote":"Q1","kind":"outsourcing_confirm","on":"2026-10-03","payload":{"resource":"OS2","hours":16.0}}
+{"id":"E3","quote":"Q1","kind":"scope_proposal","on":"2026-10-07","payload":{"extra_derivatives":3,"accepted":false}}
+{"id":"E4","quote":"Q1","kind":"quality_confirmed","on":"2026-10-08","payload":{"dimension":"visual","extra_hours":5.0}}

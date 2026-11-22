@@ -1,0 +1,421 @@
+{
+  "format": "jsonl-utf8-v1",
+  "synthetic": true,
+  "tables": {
+    "projects": {
+      "description": "历史报价与真实结项状态。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "项目"
+        },
+        "customer": {
+          "type": "str",
+          "nullable": false,
+          "description": "客户"
+        },
+        "signed_on": {
+          "type": "str",
+          "nullable": false,
+          "description": "签约日"
+        },
+        "deadline": {
+          "type": "str",
+          "nullable": false,
+          "description": "交期"
+        },
+        "closed_on": {
+          "type": "str",
+          "nullable": true,
+          "description": "实际终止或验收日，空为仍在履约"
+        },
+        "state": {
+          "type": "str",
+          "nullable": false,
+          "description": "履约状态及取消责任"
+        },
+        "quoted_minor": {
+          "type": "int",
+          "nullable": false,
+          "description": "报价美分"
+        },
+        "rounds_included": {
+          "type": "int",
+          "nullable": false,
+          "description": "包内修订轮数"
+        }
+      },
+      "key": "id",
+      "references": {},
+      "sha256": "bb0ac5089fdd8f932dfc6bda1ae08f573ede2168a8ec95af12c547de71832b3b",
+      "row_count": 140
+    },
+    "tasks": {
+      "description": "概念设计与衍生任务谱系。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "任务"
+        },
+        "project": {
+          "type": "str",
+          "nullable": false,
+          "description": "项目"
+        },
+        "parent": {
+          "type": "str",
+          "nullable": true,
+          "description": "共同前置任务"
+        },
+        "kind": {
+          "type": "str",
+          "nullable": false,
+          "description": "原设计或衍生"
+        },
+        "complexity": {
+          "type": "int",
+          "nullable": false,
+          "description": "复杂度档"
+        },
+        "territory": {
+          "type": "str",
+          "nullable": false,
+          "description": "使用地区"
+        },
+        "exclusive": {
+          "type": "bool",
+          "nullable": false,
+          "description": "独占要求"
+        },
+        "asset": {
+          "type": "str",
+          "nullable": false,
+          "description": "授权素材"
+        }
+      },
+      "key": "id",
+      "references": {
+        "project": [
+          "projects",
+          "id"
+        ],
+        "parent": [
+          "tasks",
+          "id"
+        ]
+      },
+      "sha256": "b1ee8721218f9340c86c6f837cf137dbdc6aa13c1c8c3d105ede7f924becdfd9",
+      "row_count": 560
+    },
+    "hours": {
+      "description": "实际发生工时及原始原因。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "工时"
+        },
+        "task": {
+          "type": "str",
+          "nullable": false,
+          "description": "任务"
+        },
+        "on": {
+          "type": "str",
+          "nullable": false,
+          "description": "发生日"
+        },
+        "hours": {
+          "type": "float",
+          "nullable": false,
+          "description": "小时"
+        },
+        "worker": {
+          "type": "str",
+          "nullable": false,
+          "description": "创作者"
+        },
+        "reason": {
+          "type": "str",
+          "nullable": false,
+          "description": "初稿、质量、范围或审稿"
+        }
+      },
+      "key": "id",
+      "references": {
+        "task": [
+          "tasks",
+          "id"
+        ]
+      },
+      "sha256": "8f72485fafaf1349a872ab41edb415278a110deb0b3ce21c6ef77cc131eeb08a",
+      "row_count": 560
+    },
+    "feedback": {
+      "description": "客户意见或验收，confirmed说明是否已人工确认性质。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "意见"
+        },
+        "project": {
+          "type": "str",
+          "nullable": false,
+          "description": "项目"
+        },
+        "tasks": {
+          "type": "list",
+          "nullable": false,
+          "description": "涉及任务"
+        },
+        "round": {
+          "type": "int",
+          "nullable": false,
+          "description": "修订轮次"
+        },
+        "on": {
+          "type": "str",
+          "nullable": false,
+          "description": "收到日"
+        },
+        "kind": {
+          "type": "str",
+          "nullable": false,
+          "description": "意见性质"
+        },
+        "confirmed": {
+          "type": "bool",
+          "nullable": false,
+          "description": "是否已确认性质"
+        },
+        "dimension": {
+          "type": "str",
+          "nullable": false,
+          "description": "涉及维度"
+        }
+      },
+      "key": "id",
+      "references": {
+        "project": [
+          "projects",
+          "id"
+        ]
+      },
+      "sha256": "6918c231fbce19c4518371cc851ae4b8dd40b0feeab12277a0caa72aee4ee5e9",
+      "row_count": 560
+    },
+    "assets": {
+      "description": "许可素材与独占占用。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "素材"
+        },
+        "territories": {
+          "type": "list",
+          "nullable": false,
+          "description": "允许地域"
+        },
+        "exclusive_customer": {
+          "type": "str",
+          "nullable": true,
+          "description": "现有独占客户，空为非独占"
+        },
+        "license_minor": {
+          "type": "int",
+          "nullable": false,
+          "description": "授权成本美分"
+        },
+        "valid_to": {
+          "type": "str",
+          "nullable": false,
+          "description": "授权期限"
+        }
+      },
+      "key": "id",
+      "references": {},
+      "sha256": "e68af7ef2950862c77baefcea7e86daca289d55465a952469bea7f51341f926f",
+      "row_count": 10
+    },
+    "creators": {
+      "description": "可用创作者与权限范围。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "创作者"
+        },
+        "skills": {
+          "type": "list",
+          "nullable": false,
+          "description": "能力类型"
+        },
+        "available_hours": {
+          "type": "float",
+          "nullable": false,
+          "description": "可用周工时"
+        },
+        "week": {
+          "type": "str",
+          "nullable": false,
+          "description": "周起日"
+        },
+        "territories": {
+          "type": "list",
+          "nullable": false,
+          "description": "可承接地域"
+        }
+      },
+      "key": "id",
+      "references": {},
+      "sha256": "156235099b320cac303c2723911b149ce5096eeb22d803f5e2fd7c18cd826928",
+      "row_count": 8
+    },
+    "outsourcing": {
+      "description": "外包资源商业条款。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "资源包"
+        },
+        "kind": {
+          "type": "str",
+          "nullable": false,
+          "description": "采购模式"
+        },
+        "hours": {
+          "type": "float",
+          "nullable": false,
+          "description": "工时包"
+        },
+        "price_minor": {
+          "type": "int",
+          "nullable": false,
+          "description": "包价"
+        },
+        "week": {
+          "type": "str",
+          "nullable": false,
+          "description": "适用周"
+        },
+        "min_purchase_hours": {
+          "type": "float",
+          "nullable": false,
+          "description": "最低采购工时"
+        },
+        "release_by_stage": {
+          "type": "bool",
+          "nullable": false,
+          "description": "允许按阶段释放"
+        }
+      },
+      "key": "id",
+      "references": {},
+      "sha256": "bf7534e29be21ad485f682d2ada59bf4854de1d6c3275601c23bb626bd192f4e",
+      "row_count": 2
+    },
+    "quote_requests": {
+      "description": "客户拟采购的真实组合范围。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "报价请求"
+        },
+        "customer": {
+          "type": "str",
+          "nullable": false,
+          "description": "客户"
+        },
+        "deliverables": {
+          "type": "list",
+          "nullable": false,
+          "description": "交付物组合"
+        },
+        "asset": {
+          "type": "str",
+          "nullable": false,
+          "description": "拟用素材"
+        },
+        "territory": {
+          "type": "str",
+          "nullable": false,
+          "description": "用途地域"
+        },
+        "deadline": {
+          "type": "str",
+          "nullable": false,
+          "description": "交期"
+        },
+        "rounds": {
+          "type": "int",
+          "nullable": false,
+          "description": "约定修订轮数"
+        },
+        "customer_reply_days": {
+          "type": "int",
+          "nullable": false,
+          "description": "客户响应期限"
+        },
+        "expires_on": {
+          "type": "str",
+          "nullable": false,
+          "description": "报价到期"
+        }
+      },
+      "key": "id",
+      "references": {
+        "asset": [
+          "assets",
+          "id"
+        ]
+      },
+      "sha256": "827dd6c9974942cc9baa07e6a3139948f3b3dfeea7b86b4787b360d10d522688",
+      "row_count": 2
+    },
+    "order_events": {
+      "description": "后续客户、外包与范围确认动作。",
+      "fields": {
+        "id": {
+          "type": "str",
+          "nullable": false,
+          "description": "动作"
+        },
+        "quote": {
+          "type": "str",
+          "nullable": false,
+          "description": "报价请求"
+        },
+        "kind": {
+          "type": "str",
+          "nullable": false,
+          "description": "业务动作"
+        },
+        "on": {
+          "type": "str",
+          "nullable": false,
+          "description": "发生日"
+        },
+        "payload": {
+          "type": "dict",
+          "nullable": false,
+          "description": "原始业务事实"
+        }
+      },
+      "key": "id",
+      "references": {
+        "quote": [
+          "quote_requests",
+          "id"
+        ]
+      },
+      "sha256": "94d55f814dbb21e6478713ce9315d829a05e5d9c325833de71a6dbedef39c9ff",
+      "row_count": 4
+    }
+  }
+}

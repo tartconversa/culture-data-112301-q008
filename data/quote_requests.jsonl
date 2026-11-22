@@ -1,0 +1,2 @@
+{"id":"Q1","customer":"C0","deliverables":[{"kind":"concept","count":1},{"kind":"derivative","count":6}],"asset":"A0","territory":"EU","deadline":"2026-10-16","rounds":2,"customer_reply_days":3,"expires_on":"2026-10-03"}
+{"id":"Q2","customer":"C1","deliverables":[{"kind":"concept","count":1},{"kind":"derivative","count":4}],"asset":"A0","territory":"EU","deadline":"2026-10-16","rounds":3,"customer_reply_days":2,"expires_on":"2026-10-03"}

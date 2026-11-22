@@ -1,0 +1,10 @@
+{"id":"A0","territories":["JP","EU"],"exclusive_customer":"C0","license_minor":15000,"valid_to":"2027-03-31"}
+{"id":"A1","territories":["EU","NA"],"exclusive_customer":null,"license_minor":16000,"valid_to":"2027-03-31"}
+{"id":"A2","territories":["JP","EU"],"exclusive_customer":null,"license_minor":17000,"valid_to":"2027-03-31"}
+{"id":"A3","territories":["EU","NA"],"exclusive_customer":"C3","license_minor":18000,"valid_to":"2027-03-31"}
+{"id":"A4","territories":["JP","EU"],"exclusive_customer":null,"license_minor":19000,"valid_to":"2027-03-31"}
+{"id":"A5","territories":["EU","NA"],"exclusive_customer":null,"license_minor":20000,"valid_to":"2027-03-31"}
+{"id":"A6","territories":["JP","EU"],"exclusive_customer":"C6","license_minor":21000,"valid_to":"2027-03-31"}
+{"id":"A7","territories":["EU","NA"],"exclusive_customer":null,"license_minor":22000,"valid_to":"2027-03-31"}
+{"id":"A8","territories":["JP","EU"],"exclusive_customer":null,"license_minor":23000,"valid_to":"2027-03-31"}
+{"id":"A9","territories":["EU","NA"],"exclusive_customer":"C9","license_minor":24000,"valid_to":"2027-03-31"}
