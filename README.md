@@ -17,3 +17,12 @@ python3 -m unittest discover -s tests -v
 Windows PowerShell中可用`.venv\Scripts\Activate.ps1`激活虚拟环境。
 
 资料检查入口输出各表行数，验证内容指纹、字段类型及直接外键。现有测试检查资料完整性和损坏检测，其通过只说明资料可读取。data及docs中的记录不包含经营分析结果。应用产生的本地状态可放入state，导出内容可放入outputs，两者已从Git排除。
+
+## 估价应用
+
+estimation/提供接收项目、估价、确认报价与追踪变更的可运行能力，说明见docs/应用说明.md：
+
+```sh
+python3 tools/estimate.py
+python3 -m unittest discover -s tests -v
+```

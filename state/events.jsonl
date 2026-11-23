@@ -1,0 +1,6 @@
+{"order": "ORD-Q1", "id": "E1", "kind": "customer_accept", "on": "2026-10-02", "payload": {"fixed_price_minor": 350000}}
+{"order": "ORD-Q1", "id": "E2", "kind": "outsourcing_confirm", "on": "2026-10-03", "payload": {"resource": "OS2", "hours": 16.0}}
+{"order": "ORD-Q1", "id": "E3", "kind": "scope_proposal", "on": "2026-10-07", "payload": {"extra_derivatives": 3, "accepted": false}}
+{"order": "ORD-Q1", "id": "E4", "kind": "quality_confirmed", "on": "2026-10-08", "payload": {"dimension": "visual", "extra_hours": 5.0}}
+{"order": "ORD-Q1", "id": "E5", "kind": "outsourcing_confirm", "on": "2026-10-09", "payload": {"resource": "OS2", "hours": 8.0}}
+{"order": "ORD-Q1", "id": "E6", "kind": "acceptance", "on": "2026-10-15", "payload": {}}
